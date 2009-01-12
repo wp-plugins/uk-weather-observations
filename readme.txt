@@ -35,14 +35,18 @@ To put the weather observations information at any place on a post or page, use 
 
 = Configuration =
 
-The plugin is pre-configured by default to display recent weather observations for Marazion, Cornwall. To change this, 
+The plugin is pre-configured by default to display recent weather observations for Marazion, Cornwall. To change this:
  
 1. Go to WP-Admin -> Settings -> UK Weather Observations
 2. Enter the BBC location code for the location that you are interested in
-3. Click on 'Save Changes' to save the new location and update the weather information for it
+3. Click on 'Save Changes' to save the new location and update the weather information for it.
+
 No other configuration is normally required.
+
 To find your BBC location code, go to www.bbc.co.uk/weather/5day.shtml and search for your nearest town or large village.
+
 If the search is successful, your BBC location code is the 4 digit number at the end of the URL. For example, if you search for 'Marazion', the search result URL is http://www.bbc.co.uk/weather/5day.shtml?id=3737 - the BBC location code is 3737.
+
 If the search is not successful, you are given the option of a post code search, which will give similar results, but does not always seem to choose the closest weather observation.
 
 == Support ==
