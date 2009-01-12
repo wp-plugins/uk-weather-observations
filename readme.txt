@@ -28,7 +28,7 @@ The UK Weather Observations plugin for WordPress displays recent local UK weathe
 1. Extract the files from the uk-weather-observations .zip archive.
 2. Upload the complete plugin folder /uk-weather-observations/, contained in the .zip file, to your WordPress plugin directory.
 3. Go to your WordPress Admin panel -> Plugins and activate the UK Weather Observations plugin.
-4. (If required) Go to Appearance -> Widgets and add the UK Weather Observations widget to the sidebar
+4. (If required) Go to Appearance -> Widgets and add the UK Weather Observations widget to the sidebar.
 
 To put the weather observations information at any place on a post or page, use this shortcode:
 [uk-wops]
@@ -37,8 +37,8 @@ To put the weather observations information at any place on a post or page, use 
 
 The plugin is pre-configured by default to display recent weather observations for Marazion, Cornwall. To change this:
  
-1. Go to WP-Admin -> Settings -> UK Weather Observations
-2. Enter the BBC location code for the location that you are interested in
+1. Go to WP-Admin -> Settings -> UK Weather Observations.
+2. Enter the BBC location code for the location that you are interested in.
 3. Click on 'Save Changes' to save the new location and update the weather information for it.
 
 No other configuration is normally required.
