@@ -1,7 +1,7 @@
 === UK Weather Observations ===
 Contributors: Clive Goodhead, Clive Publishing
 Donate Link: http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/
-Tags:  BBC, donate, GNU, PHP, plugin, weather, widget, WordPress
+Tags:  weather, observations, WordPress, plugin, widget, BBC, UK 
 Requires at least: 2.7
 Tested up to: 2.7
 Stable tag: 1.0
@@ -12,7 +12,7 @@ The UK Weather Observations plugin for WordPress displays recent local UK weathe
 
 The UK Weather Observations plugin for WordPress displays recent local UK weather observations based on RSS feeds published by the BBC. Please see the <a href="http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/" title="UK Weather Observations">UK Weather Observations web page</a> for more information.
 
-= WordPress UK Weather Observations Features =
+= Features =
 
 * Displays local weather information, updated regularly during daylight hours; 
 * Weather information is sourced from the BBC; 
@@ -34,27 +34,27 @@ To put the weather observations information at any place on a post or page, use 
 
 [uk-wops]
 
-== Configuration ==
+= Configuration =
 
 The plugin is pre-configured by default to display recent weather observations for Marazion, Cornwall. To change this, 
  
-= 1. Go to WP-Admin -> Settings -> UK Weather Observations =
+1. Go to WP-Admin -> Settings -> UK Weather Observations
 
-= 2. Enter the BBC location code for the location that you are interested in =
+2. Enter the BBC location code for the location that you are interested in
 
-= 3. Click on 'Save Changes' to save the new location and update the weather information for it =
+3. Click on 'Save Changes' to save the new location and update the weather information for it
 
 No other configuration is normally required.
 
 To find your BBC location code, go to www.bbc.co.uk/weather/5day.shtml and search for your nearest town or large village.
 
-If the search is successful, your BBC location code is the 4 digit number at the end of the URL. For example, if you search for ‘Marazion’, the search result URL is http://www.bbc.co.uk/weather/5day.shtml?id=3737 - the BBC location code is 3737.
+If the search is successful, your BBC location code is the 4 digit number at the end of the URL. For example, if you search for 'Marazion', the search result URL is http://www.bbc.co.uk/weather/5day.shtml?id=3737 - the BBC location code is 3737.
 
 If the search is not successful, you are given the option of a post code search, which will give similar results, but does not always seem to choose the closest weather observation.
 
 == Support ==
 
-If you have comments, problems or suggestions or see something in the code which is not compliant with the WordPress Plugin Codex, please add a comment at http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/, create a post at the WordPress support forum (tag it with “uk-weather-observations”) or send an email to clive@clive-publishing.com.
+If you have comments, problems or suggestions or see something in the code which is not compliant with the WordPress Plugin Codex, please add a comment at http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/, create a post at the WordPress support forum (tag it with 'uk-weather-observations') or send an email to clive@clive-publishing.com.
 
-If you think you’ve found a bug, please send an email to clive@clive-publishing.com and I will do my best to fix it.
+If you think you've found a bug, please send an email to clive@clive-publishing.com and I will do my best to fix it.
 
