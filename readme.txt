@@ -34,6 +34,8 @@ To put the weather observations information at any place on a post or page, use 
 
 [uk-wops]
 
+If you are updating from an earlier version, you can use the WordPress automatic upgrade facility in your blog’s dashboard.
+
 == Configuration ==
 
 The plugin is pre-configured by default to display recent weather observations for Penzance, Cornwall. To change this, 
