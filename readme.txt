@@ -1,7 +1,7 @@
 === UK Weather Observations ===
 Contributors: Clive Goodhead, Clive Publishing
 Donate Link: http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/
-Tags:  BBC, donate, GNU, PHP, plugin, weather, widget, WordPress
+Tags:  BBC, GNU, observations, PHP, plugin, weather, weather observations, widget, WordPress
 Requires at least: 2.7
 Tested up to: 2.8
 Stable tag: 2.0
@@ -10,7 +10,7 @@ The UK Weather Observations plugin for WordPress displays recent local weather o
 
 == Description ==
 
-The UK Weather Observations plugin for WordPress displays recent local weather observations based on RSS feeds published by the BBC. Please see the <a href="http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/" title="UK Weather Observations">UK Weather Observations web page</a> for more information.
+The UK Weather Observations plugin for WordPress displays recent local weather observations based on RSS feeds published by the BBC. Please see the <a href="http://www.clive-publishing.com/2009/07/wordpress-uk-weather-observations-plugin-version-2-0/" title="UK Weather Observations">UK Weather Observations web page</a> for more information.
 
 = WordPress UK Weather Observations Features =
 
@@ -56,7 +56,7 @@ If the search is not successful, try the next nearest town or large village.
 
 == Support ==
 
-If you have comments, problems or suggestions or see something in the code which is not compliant with the WordPress Plugin Codex, please add a comment at http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/, create a post at the WordPress support forum (tag it with “uk-weather-observations”) or send an email to clive@clive-publishing.com.
+If you have comments, problems or suggestions or see something in the code which is not compliant with the WordPress Plugin Codex, please add a comment at http://www.clive-publishing.com/2009/07/wordpress-uk-weather-observations-plugin-version-2-0/, create a post at the WordPress support forum (tag it with “uk-weather-observations”) or send an email to clive@clive-publishing.com.
 
 If you think you’ve found a bug, please send an email to clive@clive-publishing.com and I will do my best to fix it.
 

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: UK Weather Observations
-Plugin URI: http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/
+Plugin URI: http://www.clive-publishing.com/2009/07/wordpress-uk-weather-observations-plugin-version-2-0/
 Description: Display up to date weather observations.
 Version: 2.0
 Author: Clive Publishing
@@ -126,8 +126,8 @@ foreach($items as $vals) {
   }
 $output .= "</table>\n";
 $output .= '<p>Weather information derived from data from bbc.co.uk';
-$output .= '<a href="http://www.clive-publishing.com/2009/01/';
-$output .= 'uk-weather-observations-plugin-for-wordpress/">.</a></p>';
+$output .= '<a href="http://www.clive-publishing.com/2009/07/';
+$output .= 'wordpress-uk-weather-observations-plugin-version-2-0/">.</a></p>';
 $output .= "\n</div>\n";
 // Remove degrees F temperature.
 $output = preg_replace("/ \(\d+&#xB0;F\)/", '', $output);
