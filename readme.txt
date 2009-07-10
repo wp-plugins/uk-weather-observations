@@ -1,7 +1,7 @@
 === UK Weather Observations ===
 Contributors: Clive Goodhead, Clive Publishing
 Donate Link: http://www.clive-publishing.com/free-stuff/oss/uk-weather-observations/
-Tags:  BBC, GNU, observations, PHP, plugin, weather, weather observations, widget, WordPress
+Tags:  BBC, GNU, observations, PHP, plugin, rss, weather, weather observations, widget, WordPress
 Requires at least: 2.7
 Tested up to: 2.8
 Stable tag: 2.0
