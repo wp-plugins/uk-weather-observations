@@ -1,6 +1,6 @@
 === UK Weather Observations ===
 Contributors: Clive Goodhead, Clive Publishing
-Donate Link: http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/
+Donate Link: http://www.clive-publishing.com/free-stuff/oss/uk-weather-observations/
 Tags:  BBC, GNU, observations, PHP, plugin, weather, weather observations, widget, WordPress
 Requires at least: 2.7
 Tested up to: 2.8
@@ -10,11 +10,11 @@ The UK Weather Observations plugin for WordPress displays recent local weather o
 
 == Description ==
 
-The UK Weather Observations plugin for WordPress displays recent local weather observations based on RSS feeds published by the BBC. Please see the <a href="http://www.clive-publishing.com/2009/07/wordpress-uk-weather-observations-plugin-version-2-0/" title="UK Weather Observations">UK Weather Observations web page</a> for more information.
+The UK Weather Observations plugin for WordPress displays recent local weather observations based on RSS feeds published by the BBC. Please see the <a href="http://www.clive-publishing.com/free-stuff/oss/uk-weather-observations/" title="UK Weather Observations">UK Weather Observations web page</a> for more information.
 
 = WordPress UK Weather Observations Features =
 
-* Displays local weather information, updated regularly during daylight hours; 
+* Displays local weather information (worldwide, not just UK), updated regularly during daylight hours; 
 * Weather information is sourced from the BBC; 
 * Weather information is updated automatically; 
 * Admin interface to select locality and customize settings; 
@@ -52,13 +52,13 @@ To find your BBC location code, go to http://news.bbc.co.uk/weather/ and search 
 
 If the search is successful, your BBC location code is the one to four digit number in the middle of the URL. For example, if you search for ‘Penzance’, the search result URL is 'http://news.bbc.co.uk/weather/forecast/2756?&search=penzance&itemsPerPage=10&region=uk' - the BBC location code is 2756. If the BBC location code is less than four digits add leading zeros, for example, for Oxford use 0025.
 
-Alternatively, download the latest version of 'BBC Weather Observations Codes' from the Clive Publishing website (http://www.clive-publishing.com/) and search it for your nearest town or large village.
+Alternatively, download the latest version of 'BBC Weather Observations Codes' from the plugin's web page (http://www.clive-publishing.com/free-stuff/oss/uk-weather-observations/) and search it for your nearest town or large village.
 
 If the search is not successful, try the next nearest town or large village.
 
 == Support ==
 
-If you have comments, problems or suggestions or see something in the code which is not compliant with the WordPress Plugin Codex, please add a comment at http://www.clive-publishing.com/2009/07/wordpress-uk-weather-observations-plugin-version-2-0/, create a post at the WordPress support forum (tag it with “uk-weather-observations”) or send an email to clive@clive-publishing.com.
+If you have comments, problems or suggestions or see something in the code which is not compliant with the WordPress Plugin Codex, please add a comment on my blog at http://www.clive-publishing.com/, create a post at the WordPress support forum (tag it with “uk-weather-observations”) or send an email to clive@clive-publishing.com.
 
 If you think you’ve found a bug, please send an email to clive@clive-publishing.com and I will do my best to fix it.
 
