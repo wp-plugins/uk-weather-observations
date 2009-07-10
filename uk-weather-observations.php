@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: UK Weather Observations
-Plugin URI: http://www.clive-publishing.com/2009/01/uk-weather-observations-plugin-for-wordpress/
-Description: Display up to date UK weather observations.
-Version: 1.0
+Plugin URI: http://www.clive-publishing.com/free-stuff/oss/uk-weather-observations/
+Description: Display up to date weather observations.
+Version: 2.0
 Author: Clive Publishing
 Author URI: http://www.clive-publishing.com/
 */
@@ -63,7 +63,6 @@ function cp_wobs_deactivate() {
 wp_clear_scheduled_hook('cp_wobs_hourly');
 delete_option('cp_wobs_output');
 delete_option('cp_wobs_noobs');
-delete_option('cp_wobs_bbc');
 delete_option('cp_wobs_location');
 delete_option('cp_wobs_lastrun');
 }
@@ -79,15 +78,13 @@ if (function_exists('add_shortcode'))
 	add_shortcode('uk-wobs', 'cp_wobs_display');
 
 function cp_wobs_getdata() {
-$bbc = get_option('cp_wobs_bbc');
-if ($bbc == '')
-	$bbc = 'http://feeds.bbc.co.uk/weather/feeds/rss/obs/id/';
 $loc = get_option('cp_wobs_location');
 if (!preg_match('!\d\d\d\d!', $loc))
-	$loc = '3737';      // Default location: Marazion, Cornwall.
-$f = $bbc . $loc . '.xml';
-
-if (!($data = @file_get_contents($f))) return 0;
+	$loc = '2756';      // Default location: Penzance, Cornwall.
+$f = "http://newsrss.bbc.co.uk/weather/forecast/$loc/ObservationsRSS.xml";
+$data = cp_wobs_getrawdata($f);
+if ($data == '') return 0;
+if ($data == 'PHP external file access problem') return $data;
 if (!preg_match('!<channel>.*</channel>!s', $data, $matches))
 	return 0;
 $data = $matches[0];
@@ -129,10 +126,28 @@ foreach($items as $vals) {
   }
 $output .= "</table>\n";
 $output .= '<p>Weather information derived from data from bbc.co.uk';
-$output .= '<a href="http://www.clive-publishing.com/2009/01/';
-$output .= 'uk-weather-observations-plugin-for-wordpress/">.</a></p>';
+$output .= '<a style="text-decoration:none;" ';
+$output .= 'href="http://www.clive-publishing.com/">.</a></p>';
 $output .= "\n</div>\n";
+// Remove degrees F temperature.
+$output = preg_replace("/ \(\d+&#xB0;F\)/", '', $output);
+return $output;
+}
 
+function cp_wobs_getrawdata($f) {
+if (function_exists('curl_init')) {
+  echo "curl used";
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $f);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  $output = curl_exec($ch);
+  curl_close($ch);
+  }
+elseif (ini_get('allow_url_fopen')) {
+  echo "fopen used";
+  $output = @file_get_contents($f);
+  }
+else $output = 'PHP external file access problem';
 return $output;
 }
 
@@ -146,7 +161,6 @@ add_action('admin_menu', 'cp_wobs_admin_menu');
 
 function cp_wobs_plugin_options() {
 $loc = get_option('cp_wobs_location');
-$bbc = get_option('cp_wobs_bbc');
 $noobs = get_option('cp_wobs_noobs');
 $hidden_field_name = 'cp_wobs_hidden';
 
@@ -156,19 +170,20 @@ if ($_POST[$hidden_field_name] == 'Y' ) {
 	update_option('cp_wobs_location', $loc);
 	$noobs = $_POST['cp_wobs_noobs'];
 	update_option('cp_wobs_noobs', $noobs);
-	$bbc = $_POST['cp_wobs_bbc'];
-	update_option('cp_wobs_bbc', $bbc);
 	cp_wobs_update();  // Update with new options.
 	// Put an options updated message on the screen
 	echo '<div class="updated"><p><strong>Options saved.</strong></p></div>';
 	}
 $lastupdate = get_option('cp_wobs_lastrun');
+$nextupdate = date(DATE_RSS, wp_next_scheduled('cp_wobs_hourly'));
+
 echo <<<END
 <div class="wrap">
 <form method="post" action="">
 <h2>UK Weather Observations settings</h2>
 <p>Last UK Weather Observations database update: $lastupdate.</p>
-<h3>Basic Options</h3>
+<p>Next update: $nextupdate.</p> 
+<h3>Options</h3>
 <table class="form-table" cellspacing="2" cellpadding="5" width="100%">
 <tr>
 <th width="30%" valign="top" style="padding-top: 10px;">
@@ -179,7 +194,7 @@ echo <<<END
  id="cp_wobs_location" value="$loc" />
 <p style="margin: 5px 10px;" class="setting-description">Enter the 
 4 digit BBC code for your selected location. If no code is entered, 
-weather observations for Marazion, Cornwall (code 3737) will be 
+weather observations for Penzance, Cornwall (code 2756) will be 
 displayed.</p>
 </td>
 </tr>
@@ -195,23 +210,6 @@ the message that you require displayed when no current weather
 observations are available for the chosen location. If no 
 message is entered, 'No current observations available' will be 
 displayed.</p>
-</td>
-</tr>
-</table>
-<h3>Advanced Options</h3>
-<table class="form-table" cellspacing="2" cellpadding="5" width="100%">
-<tr>
-<th width="30%" valign="top" style="padding-top: 10px;">
-<label for="cp_wobs_bbc">BBC file directory:</label>
-</th>
-<td>
-<input type="text" size="50" name="cp_wobs_bbc" 
- id="cp_wobs_bbc" value="$bbc" />
-<p style="margin: 5px 10px;" class="setting-description">This is 
-required only if the BBC change the location of their weather 
-feeds between updates of the plugin. If no directory is entered, 
-the default of 'http://feeds.bbc.co.uk/weather/feeds/rss/obs/id/' 
-will be used. Include the trailing '/'.</p>
 </td>
 </tr>
 </table>
