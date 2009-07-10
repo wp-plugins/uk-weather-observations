@@ -34,7 +34,7 @@ To put the weather observations information at any place on a post or page, use 
 
 [uk-wops]
 
-If you are updating from an earlier version, you can use the WordPress automatic upgrade facility in your blog’s dashboard.
+If you are updating from an earlier version, you can use the WordPress automatic upgrade facility in your blog's dashboard.
 
 == Configuration ==
 
